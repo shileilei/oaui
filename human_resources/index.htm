@@ -1,0 +1,42 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<link rel="stylesheet" type= "text/css" href="ext_4.1.1a/resources/css/ext-all.css"/>
+<script type="text/javascript" src="ext_4.1.1a/ext-all.js"></script>
+<script type="text/javascript" src= "ext_4.1.1a/locale/ext-lang-zh_CN.js"></script>
+
+<script type="text/javascript">
+
+Ext.onReady(function(){
+
+    Ext.create('Ext.tab.Panel',{
+    	title: 'Ext.tab.Panel示例',
+    	frame:true,
+    	height:500,
+    	width:850,
+    	activeTab:0,
+    	renderTo:'yy',
+    	items:[
+    		{title:'标签1',html:"<table border=\"1\" width=\"850\" id=\"table1\" cellspacing=\"1\" bordercolor=\"#FFFFFF\" style=\"border:1px solid #456AB8; padding:1px; \" bordercolorlight=\"#4B70BE\" bordercolordark=\"#4B70BE\" height=\"583\"> <\/table>"},
+    	    {title:'标签2',html:'内容简介2'},
+    	    {title:'标签3',html:'内容简介3'},
+    	    {title:'标签4',html:'内容简介4'},
+    		]
+   		 });
+	  }); 
+ 
+
+</script>
+
+
+
+</head>
+
+<body>
+<div id="yy" align="center">
+</div>
+</body>
+
+</html>

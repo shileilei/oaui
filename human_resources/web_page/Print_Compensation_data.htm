@@ -1,0 +1,129 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>薪酬报表打印</title>
+   
+    <style>
+　　　　.tabprint thead{
+　　　　　 display:table-header-group;
+　　　　}
+　　　　.tabprint td{
+　　　　　 border-right:1px solid black;
+　　　　　 border-bottom:1px solid black;
+　　　　}
+　　　　.tabprint {
+　　　　　 border-left:1px solid black;
+　　　　　　　　/*border-top:1px solid black;*/
+　　　　}
+　　　　.tp_border_top td{
+　　　　　 BORDER-TOP: black 1px solid;
+　　　　　 BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid;
+　　　　}
+　　</style>
+
+
+<OBJECT id=WebBrowser classid=CLSID:8856F961-340A-11D0-A96B-00C04FD705A2 height=0 width=0> </OBJECT> 
+	<style media=print> .Noprint{display:none;} </style>
+
+
+
+</head>
+
+<body topmargin="30">
+<div align="center">
+
+
+<table border="1" width="730" id="table1" cellspacing="0" bordercolor="#000000" style="border:2px solid #000000; padding:1px; border-collapse:collapse" cellpadding="0" height="222">
+	
+				<tr>
+		<td height="50" align="center" colspan="4" rowspan="2" width="238"><img border="0" src="../picture/ywbs-bz.gif" width="238" height="50" align="left"></td>
+		<td  align="center" colspan="3" height="25">
+		<font size="5" face="隶书">2013年01月（身份）员工</font></td>
+		<td  align="left" colspan="3" height="25"><font size="2">制 表 人：</font></td>
+			</tr>
+			
+					
+			<tr>
+		<td align="center" colspan="3" height="25"><font size="5" face="隶书">薪酬报表</font></td>
+		<td align="left" colspan="3" height="25"><font size="2">制表单位：人事部</font></td>
+			</tr>	
+	<tr>
+		<td align="center" width="30" height="28">
+		<font size="2">序号</font></td>
+		<td align="center" width="70" height="28"><font size="2">档案编号</font></td>
+		<td align="center" width="70" height="28"><font size="2">员工姓名</font></td>
+		<td align="center" width="70" height="28"><font size="2">所属部门</font></td>
+		<td align="center" width="90" height="28"><font size="2">员工身份</font></td>
+		<td align="center" width="90" height="28"><font size="2">应发金额</font></td>
+		<td align="center" width="91" height="28"><font size="2">社保合计</font></td>
+		<td align="center" width="68" height="28"><font size="2">完税等级</font></td>
+		<td align="center" width="66" height="28"><font size="2">纳税金额</font></td>
+		<td align="center" height="28" width="66"><font size="2">实发金额</font></td>
+		
+		
+		
+	</tr>
+	<tr>
+		<td align="center" height="28" width="30"><font size="2">01</font></td>
+		<td align="center" width="70" height="28"><font size="2">001</font></td>
+		<td align="center" width="70" height="28">　</td>
+		<td align="center" width="70" height="28">　</td>
+		<td align="center" width="90" height="28">　</td>
+		<td align="center" width="90" height="28"><font size="2">8888</font></td>
+		<td align="center" width="91" height="28"><font size="2">6666</font></td>
+		<td align="center" width="68" height="28"><font size="2">1</font></td>
+		<td align="center" width="66" height="28"><font size="2">2222</font></td>
+		<td align="center" height="28" width="66"><font size="2">7777</font></td>
+	</tr>
+	
+	
+	<tr>
+		<td align="left" height="28" width="177" colspan="3"><font size="2">应发合计：</font></td>
+		<td align="left" width="161" height="28" colspan="2"><font size="2">社保合计：</font></td>
+		<td align="left" width="180" height="28" colspan="2"><font size="2">纳税合计：</font></td>
+		<td align="left" width="201" height="28" colspan="3"><font size="2">实发合计：</font></td>
+	</tr>
+	
+	
+	<tr>
+		<td align="left" height="28" width="177" colspan="3"><font size="2">社长审批：</font></td>
+		<td align="left" width="161" height="28" colspan="2"><font size="2">人事审核：</font></td>
+		<td align="left" width="180" height="28" colspan="2"><font size="2">财务审核：</font></td>
+		<td align="left" width="201" height="28" colspan="3">
+		<font size="2">
+		<script language="JavaScript" type="text/JavaScript">
+var day="";
+var month="";
+var ampm="";
+var ampmhour="";
+var myweekday="";
+var year="";
+mydate=new Date();
+myweekday=mydate.getDay();
+mymonth=mydate.getMonth()+1;
+myday= mydate.getDate();
+myyear= mydate.getYear();
+year=(myyear > 200) ? myyear : 1900 + myyear;
+document.write("制表日期："+year+"年"+mymonth+"月"+myday+"日 ");
+       </script></font></td>
+	</tr>
+	
+	<tr class="Noprint">
+		<td height="28" align="center" colspan="10">
+		
+			<input type=button value="打 印"  onclick=document.all.WebBrowser.ExecWB(6,1) name="B1" height="10" cellspacing="0" cellpadding="0" style="width: 50; height:20"> 
+			<input type="button" value="设 置" onclick=document.all.WebBrowser.ExecWB(8,1) name="B2" height="10" cellspacing="0" cellpadding="0" style="width: 50; height:20" >
+			<input type="submit" value="返 回" onclick="window.history.back()" name="B3" height="10" cellspacing="0" cellpadding="0" style="width: 50; height:20">
+			
+
+		</td>
+			</tr>		
+</table>
+
+
+</div>
+</body>
+
+</html>

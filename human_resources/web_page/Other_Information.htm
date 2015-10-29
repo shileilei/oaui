@@ -1,0 +1,754 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>数据维护</title>
+<style>
+body { 
+text-align: center;
+} 
+
+TD {FONT-SIZE: 12px; COLOR: #333;}
+.solid-bottom {BORDER-BOTTOM: }
+
+.sec1  {
+background:url(../picture/cd1.gif) no-repeat;
+cursor:hand;
+line-height:25px;
+color:#dddddd;
+border-left:  1px  solid  #FFFFFF;
+border-top:  1px  solid  #FFFFFF;
+border-right:  1px  solid  gray;
+border-bottom:  1px  solid  #FFFFFF
+}
+.sec2  {
+background-color:  #0E3E97;
+cursor:  hand;
+color:  #ffffff;
+border-left:  1px  solid  #FFFFFF;
+border-top:  1px  solid  #FFFFFF;
+border-right:  1px  solid  #ffffff;
+font-weight:  bold;
+}
+</style>
+
+<script  language="JavaScript" type="text/javascript">
+function  secBoard(n)
+{
+for(i=0;i<secTable.cells.length;i++)
+secTable.cells[i].className="sec1";
+secTable.cells[n].className="sec2";
+for(i=0;i<mainTable.tBodies.length;i++)
+mainTable.tBodies[i].style.display="none";
+mainTable.tBodies[n].style.display="block";
+}
+</script>
+
+
+
+
+</head>
+
+<body>
+<table width="860" border="0" cellpadding="0" cellspacing="0" class="solid-bottom">
+
+  <tr>
+  
+    <td height="30">
+    
+    	<table  border="0"  cellpadding="0"  cellspacing="0"  id="secTable">
+      		<tr>
+       				 <td  width="123" align="center"  class="sec2"  onclick="secBoard(0)"><font size="2">基本信息</font></td>
+        			 <td  width="123" align="center"  class="sec1"  onclick="secBoard(1)"><font size="2">学习培训</font></td>
+       				 <td  width="123" align="center"  class="sec1"  onclick="secBoard(2)"><font size="2">职务变动</font></td>
+       				 <td  width="123" align="center"  class="sec1"  onclick="secBoard(3)"><font size="2">职称情况</font></td>
+       				 <td  width="123" align="center"  class="sec1"  onclick="secBoard(4)"><font size="2">资格认证</font></td>
+       				 <td  width="123" align="center"  class="sec1"  onclick="secBoard(5)"><font size="2">家庭成员</font></td>
+       				 <td  width="123" align="center"  class="sec1"  onclick="secBoard(6)"><font size="2">登录信息</font></td>
+
+     		 </tr>
+        </table>
+    </td>
+  </tr>
+</table>
+
+
+<table  border="0"  cellspacing="5"  cellpadding="0"  width="860"  height="120"  id="mainTable">
+   
+  <tbody  style="display:block;">  
+    <tr>
+      <td >
+      
+      <div align="center"> 
+     
+<table border="1" width="860" id="table1" cellspacing="1" bordercolor="#FFFFFF" style="border:1px solid #456AB8; padding:1px; " bordercolorlight="#4B70BE" bordercolordark="#4B70BE" height="583">
+	<!-- MSTableType="layout" -->
+	<form method="POST" action="--WEBBOT-SELF--" enctype="multipart/form-data" style="color: #0000FF">
+					
+			<tr>
+		<td height="30" align="center" colspan="8" background="../picture/cd2.gif" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF">
+		<font color="#FFFFFF" size="2">基本信息登记表</font></td>
+			</tr>
+			
+			<tr>
+		<td align="right" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><font size="2">档案编号：</font></td>
+		<td align="left" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><input name="T2" size="13" style="float: left; color:#0000FF"></td>
+		<td align="right" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><font size="2">员工姓名：</font>
+		</td>
+		<td align="left" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><input name="T3" size="13" style="float: left; color:#0000FF"></td>
+		<td align="right" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><font size="2">性&nbsp; &nbsp; 别：</font></td>
+		<td align="left" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><select size="1" name="D1" style="width: 103; height:19; color:#0000FF"><option value="0">男</option><option value="0">女</option></select></td>
+		<td align="right" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="175" colspan="2" rowspan="5">
+		<p align="center">	<font size="2">照片</font></td>
+			</tr>
+			<tr>
+		<td align="right" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><font size="2">婚姻状况：</font></td>
+		<td align="left" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><select size="1" name="D1" style="width: 103; height:19 color:#0000FF; color:#0000FF">
+		<option value="1">已婚</option>
+		<option value="0">未婚</option>
+		<option value="离异">离异</option>
+		<option value="丧偶">丧偶</option>
+		</select></td>
+		<td align="right" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><font size="2">民&nbsp;&nbsp;&nbsp; 族：</font></td>
+		<td align="left" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><input name="T1" size="13" style="float: left; color:#0000FF"></td>
+		<td align="right" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><font size="2">党&nbsp;&nbsp;&nbsp; 派：</font></td>
+		<td align="left" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><input name="T1" size="13" style="float: left; color:#0000FF" maxlength="6"></td>
+			</tr>
+			<tr>
+		<td align="right" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><font size="2">出生年月：</font></td>
+		<td align="left" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><input name="T1" size="13" style="float: left; color:#0000FF"></td>
+		<td align="right" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><font size="2">年&nbsp;&nbsp;&nbsp; 龄：</font></td>
+		<td align="left" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><input name="T1" size="13" style="float: left; color:#0000FF"></td>
+		<td align="right" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><font size="2">邮政编码：</font></td>
+		<td align="left" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35">
+		<!--webbot bot="Validation" b-value-required="TRUE" i-minimum-length="6" i-maximum-length="6" --><input name="T1" size="13" style="float: left; color:#0000FF" maxlength="6"></td>
+			</tr>
+			<tr>
+		<td align="right" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><font size="2">详细住址：</font></td>
+		<td colspan="5" bordercolor="#FFFFFF" align="left" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><input name="T1" size="73" style="float: left; color:#0000FF"></td>
+			</tr>
+			<tr>
+		<td align="right" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><font size="2">户籍属地：</font></td>
+		<td colspan="3" bordercolor="#FFFFFF" align="left" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35">
+		<input name="T1" size="43" style="float: left; color:#0000FF"></td>
+		<td align="right" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><font size="2">健康状况：</font></td>
+		<td align="left" height="35" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF"><input name="T1" size="13" style="float: left; color:#0000FF"></td>
+			</tr>
+			
+			<tr>
+		<td align="right" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><font size="2">身份证号：</font></td>
+		<td align="left" colspan="3" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><input name="T1" size="43" style="float: rightright; color:#0000FF" maxlength="18"></td>
+		<td align="right" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35">
+		<font size="2">入社时间：</font></td>
+		<td align="left" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><input name="T1" size="13" style="float: left; color:#0000FF"></td>
+		<td align="right" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><font size="2">社&nbsp;&nbsp;&nbsp; 龄：</font></td>
+		<td align="left" height="35" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF"><input name="T1" size="13" style="float: left; color:#0000FF"></td>
+			</tr>
+			<tr>
+		<td align="right" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><font size="2">籍 &nbsp;&nbsp; 贯：</font></td>
+		
+		<td align="left" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" colspan="3" height="35">
+		<input name="T4" size="43" style="float: left; color:#0000FF"></td>
+		
+		<td align="right" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><font size="2">工作时间：</font></td>
+		<td align="left" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><input name="T1" size="13" style="float: left; color:#0000FF"></td>
+		<td align="right" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><font size="2">工&nbsp; &nbsp; 龄：</font></td>
+		<td align="left" height="35" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF"><input name="T1" size="13" style="float: left; color:#0000FF"></td>
+			</tr>
+			<tr>
+		<td align="right" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><font size="2">最高学历：</font></td>
+		
+		<td align="left" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><p align="left">
+		<select size="1" name="A1" style="width: 103; height:19; color:#0000FF">
+		<option value="初中">初中</option>
+		<option value="高中">高中</option>
+		<option value="中专">中专</option>
+		<option value="大专">大专</option>
+		<option value="专科">专科</option>
+		<option value="本科">本科</option>
+		<option value="硕士">硕士</option>
+		<option value="博士">博士</option>
+		</select></td>
+		
+		<td align="right" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><p align="right"><font size="2">证书编号：</font></td>
+		<td align="left" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><input name="T1" size="13" style="float: left; color:#0000FF"></td>
+		<td align="right" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><font size="2">所学专业：</font></td>
+		<td align="left" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><input name="T1" size="13" style="float: left; color:#0000FF"></td>
+		<td align="right" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><font size="2">毕业时间：</font></td>
+		<td align="left" height="35" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF"><input name="T1" size="13" style="float: left; color:#0000FF"></td>
+			</tr>
+			<tr>
+		<td align="right" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><font size="2">毕业院校：</font></td>
+		<td align="left" colspan="3" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><p align="left"><input name="T1" size="43" style="float: rightright; color:#0000FF"></td>
+		<td align="right" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><font size="2">学&nbsp; &nbsp; 位：</font></td>
+		<td align="left" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><p align="left"><select size="1" name="D1" style="width: 103; height:19; color:#0000FF">
+		<option value="无">无</option>
+		<option value="学士">学士</option>
+		<option value="硕士">硕士</option>
+		<option value="博士">博士</option>
+		</select>
+		　</td>
+		<td align="right" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><font size="2">证书编号：</font></td>
+		<td align="left" height="35" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF"><input name="T1" size="13" style="float: left; color:#0000FF"></td>
+			</tr>
+			<tr>
+		<td align="right" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><font size="2">所在部门：</font></td>
+		<td align="left" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><p align="left"><select size="1" name="D1" style="width: 103; height:19; color:#0000FF"><option value="1">1</option></select></td>
+		<td align="right" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><font size="2">聘任职务：</font></td>
+		<td align="left" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><p align="left"><select size="1" name="D1" style="width: 103; height:19; color:#0000FF"><option value="1">1</option></select></td>
+		<td align="right" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><font size="2">员工身份：</font></td>
+		<td align="left" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><p align="left"><select size="1" name="D1" style="width: 103; height:19; color:#0000FF"><option value="1">1</option></select></td>
+		<td align="right" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><font size="2">在职状态：</font></td>
+		<td align="left" height="35" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF"><p align="left"><select size="1" name="D1" style="width: 103; height:19; color:#0000FF"><option value="1">1</option></select></td>
+			</tr>
+			<tr>
+		<td align="right" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><font size="2">职称资格：</font></td>
+		<td align="left" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><p align="left"><select size="1" name="D1" style="width: 103; height:19; color:#0000FF"><option value="1">1</option></select></td>
+		<td align="right" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><font size="2">取得时间：</font></td>
+		<td align="left" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><p align="left"><input name="T1" size="13" style="float: left; color:#0000FF"></td>
+		<td align="right" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><font size="2">聘任职称：</font></td>
+		<td align="left" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><p align="left"><select size="1" name="D1" style="width: 103; height:19; color:#0000FF"><option value="1">1</option></select></td>
+		<td align="right" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><font size="2">聘任时间：</font></td>
+		<td align="left" height="35" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF"><input name="T1" size="13" style="float: left; color:#0000FF"></td>
+			</tr>
+			<tr>
+		<td align="right" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35">
+		<font size="2">移动电话：</font></td>
+		<td width="120" align="left" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><input name="T1" size="13" style="float: left; color:#0000FF"></td>
+		<td width="80" align="right" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35">
+		<font size="2">移动小号：</font></td>
+		<td width="120" align="left" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><input name="T1" size="13" style="float: left; color:#0000FF"></td>
+		<td width="80" align="right" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35">
+		<font size="2">住宅电话：</font></td>
+		<td width="120" align="left" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><input name="T1" size="13" style="float: left; color:#0000FF"></td>
+		<td width="80" align="right" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35">
+		<font size="2">办公电话：</font></td>
+		<td align="left" height="35" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" width="127"><input name="T1" size="13" style="float: left; color:#0000FF"></td>
+				</tr>
+				<tr>
+		<td align="right" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><font size="2">Q Q 号码：</font></td>
+		<td width="120" align="left" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><input name="T5" size="13" style="float: left; color:#0000FF"></td>
+		<td width="80" align="right" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35">
+		<font size="2">网络邮箱：</font></td>
+		<td width="120" align="left" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><input name="T5" size="13" style="float: left; color:#0000FF"></td>
+		<td width="80" align="right" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><font size="2">备注字段：</font></td>
+		<td width="120" align="left" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><input name="T5" size="13" style="float: left; color:#0000FF"></td>
+		<td width="80" align="right" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><font size="2">备注字段：</font></td>
+		<td align="left" height="35" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" width="127"><input name="T5" size="13" style="float: left; color:#0000FF"></td>
+				</tr>
+
+		    	<tr>
+		<td width="80" align="right" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" height="35"><font size="2">备注信息：</font></td>
+		<td height="35" align="center" colspan="7" bordercolor="#FFFFFF" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF"><input name="T1" size="103" style="float: left; color:#0000FF"></td>
+			</tr>
+			
+			<tr>
+		<td height="30" align="center" colspan="8" background="../picture/cd2.gif" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF">
+		<input type="submit" value="修改提交" name="B1" height="10" cellspacing="0" cellpadding="0" style="width: 70; text-align:center; height:20">
+		<input type="button" value="返 回" onClick="javascript:history.back();" / height="10" cellspacing="0" cellpadding="0" style="width: 50; height:20">
+		</td>
+			</tr>
+	      </form>
+          </table>
+          </div>      
+      </td>
+    </tr>
+  </tbody>
+
+
+  <tbody  style="display:none;">
+    <tr>
+      <td >
+      
+      <div align="center">
+    
+    <table border="1" width="860" id="table2" bordercolorlight="#456AB8" cellspacing="0" bordercolordark="#FFFFFF" cellpadding="0" style="border-right-color:#456AB8; border-bottom-color:#456AB8">
+		
+		
+		
+		
+		<tr>
+			<td width="60" background="../picture/cd2.gif" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" align="center" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">档案编号</font></td>
+			<td width="53" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">学历</font></td>
+			<td width="54" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">学位</font></td>
+			<td width="83" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">专业</font></td>
+			<td width="148" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" align="center" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">毕业院校</font></td>
+			<td height="30" width="78" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" align="center" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">毕业时间</font></td>
+			<td background="../picture/cd2.gif" height="30" width="82" bordercolordark="#FFFFFF" bordercolor="#4F74C2" align="center" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">毕业证号</font></td>
+			<td height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" width="83" background="../picture/cd2.gif" align="center" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">学位证号</font></td>
+			<td background="../picture/cd2.gif" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" colspan="3" align="center" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">操作</font></td>
+		</tr>
+		
+		<tr>
+			<form method="POST" action="--WEBBOT-SELF--">
+				<!--webbot bot="SaveResults" U-File="fpweb:///_private/form_results.csv" S-Format="TEXT/CSV" S-Label-Fields="TRUE" -->
+			
+			<td width="60" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2">
+			<font size="2">001</font></td>
+			<td width="53" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2"><select size="1" name="D2" style="width: 45; color:#0000FF"></select></td>
+			
+			<td width="54" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2"><select size="1" name="D1" style="width: 45; height:19; color:#0000FF">
+		<option value="无">无</option>
+		<option value="学士">学士</option>
+		<option value="硕士">硕士</option>
+		<option value="博士">博士</option>
+		</select></td>
+			
+			<td width="83" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2">
+			<input name="T1" size="9" style="color: #0000FF"></td>
+			<td width="148" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2"><input name="T1" size="18" style="color: #0000FF"></td>
+			<td align="center" height="30" width="78" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2"><input name="T1" size="9" style="color: #0000FF"></td>
+			<td align="center" height="30" width="82" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2"><input name="T1" size="9" style="color: #0000FF"></td>
+			<td align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" width="83" bordercolorlight="#4F74C2"><input name="T1" size="9" style="color: #0000FF"></td>
+			<td align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" colspan="3" bordercolorlight="#4F74C2">
+			<input type="submit" value="增加" name="B2" style="padding:0; width: 50; height: 20"><font size="2">
+			</font>
+			<input type="reset" value="重置" name="B2" height="10" cellspacing="0" cellpadding="0" style="width: 50; height:20" ><font size="2">
+			</font>
+			</td>
+			
+			</form>
+		</tr>
+		
+		<tr>
+			<td width="60" background="../picture/cd2.gif" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" align="center" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">档案编号</font></td>
+			<td width="53" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">学历</font></td>
+			<td width="54" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">学位</font></td>
+			<td width="83" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">专业</font></td>
+			<td width="148" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" align="center" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">毕业院校</font></td>
+			<td height="30" width="78" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" align="center" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">毕业时间</font></td>
+			<td background="../picture/cd2.gif" height="30" width="82" bordercolordark="#FFFFFF" bordercolor="#4F74C2" align="center" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">证毕证号</font></td>
+			<td height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" width="83" background="../picture/cd2.gif" align="center" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">学位证号</font></td>
+			<td background="../picture/cd2.gif" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" align="center" bordercolorlight="#4F74C2" width="65"><font size="2" color="#FFFFFF">毕业证</font></td>
+			<td background="../picture/cd2.gif" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" align="center" bordercolorlight="#4F74C2" width="66"><font size="2" color="#FFFFFF">学位证</font></td>
+			<td background="../picture/cd2.gif" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" align="center" bordercolorlight="#4F74C2" width="65"><font size="2" color="#FFFFFF">操作</font></td>
+		</tr>
+		
+		<tr>
+			<td width="60" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2">
+			<font size="2">001</font></td>
+			<td width="53" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2">　</td>
+			<td width="54" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2">　</td>
+			<td width="83" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2">　</td>
+			<td width="148" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2">　</td>
+			<td align="center" height="30" width="78" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2">　</td>
+			<td align="center" height="30" width="82" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2">　</td>
+			<td align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" width="83" bordercolorlight="#4F74C2">　</td>
+			<td align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2" width="65">
+			<font size="2" color="#0E3E97">上传/查看</font></td>
+			<td align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2" width="66">
+			<font size="2" color="#0E3E97">上传/查看</font></td>
+			<td align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2" width="65"><font size="2">
+			<font color="#0E3E97">修改</font>/<font color="#FF0000">删除</font></font></td>
+		</tr>
+		
+		<tr>
+			<td align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" colspan="11" background="../picture/cd2.gif" bordercolorlight="#FFFFFF">　</td>
+		</tr>
+	</table>
+    
+   </div>
+   </td>  
+   </tr>
+  </tbody>
+ 
+ <tbody  style="display:none;"> 
+    <tr>
+      <td >
+      
+        <div align="center">
+        <table border="1" width="860" id="table3" bordercolorlight="#FFFFFF" cellspacing="0" bordercolordark="#FFFFFF" cellpadding="0" style="border-color: #4F74C2; ">
+		
+		
+		
+		
+		<tr>
+			<td width="60" background="../picture/cd2.gif" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" align="center" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">档案编号</font></td>
+			<td width="104" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">时间起</font></td>
+			<td width="99" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" align="center" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">时间止</font></td>
+			<td width="214" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" align="center" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">单位名称</font></td>
+			<td height="30" width="100" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" align="center" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">部门</font></td>
+			<td height="30" width="105" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" align="center" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">职务</font></td>
+			<td height="30" width="163" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" colspan="2" align="center" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">操作</font></td>
+
+		</tr>
+		
+		<tr>
+			<form method="POST" action="--WEBBOT-SELF--">
+				<!--webbot bot="SaveResults" U-File="fpweb:///_private/form_results.csv" S-Format="TEXT/CSV" S-Label-Fields="TRUE" -->
+			
+			<td width="60" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2"><font size="2">001</font></td>
+			<td width="104" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2"><input name="T1" size="9" style="color:#0000FF"></td>
+			<td width="99" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2"><input name="T1" size="9" style="color:#0000FF"></td>
+			<td width="214" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2"><input name="T1" size="26" style="color:#0000FF"></td>
+			<td align="center" height="30" width="100" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2"><select size="1" name="D2" style="width: 90; color:#0000FF"></select></td>
+			<td align="center" height="30" width="105" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2"><select size="1" name="D2" style="width: 90; color:#0000FF"></select></td>
+			
+			<td align="center" height="30" width="163" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2" colspan="2">
+			<input type="submit" value="增加" name="B2" style="padding:0; width: 50; height: 20">
+			<input type="reset" value="重置" name="B2" height="10" cellspacing="0" cellpadding="0" style="width: 50; height:20" >
+			</td>
+			
+			</form>
+		</tr>
+		
+		<tr>
+			<td width="60" background="../picture/cd2.gif" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" align="center" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">档案编号</font></td>
+			<td width="104" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">时间起</font></td>
+			<td width="99" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" align="center" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">时间止</font></td>
+			<td width="214" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" align="center" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">单位名称</font></td>
+			<td height="30" width="100" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" align="center" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">部门</font></td>
+			<td height="30"  bordercolordark="#FFFFFF" bordercolor="#4F74C2" width="105" background="../picture/cd2.gif" align="center" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">职务</font></td>
+			<td height="30"  bordercolordark="#FFFFFF" bordercolor="#4F74C2" width="79" background="../picture/cd2.gif" align="center" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">文件</font></td>
+			<td height="30"  bordercolordark="#FFFFFF" bordercolor="#4F74C2" width="82" background="../picture/cd2.gif" align="center" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">操作</font></td>
+
+		</tr>
+		
+		<tr>
+			<td width="60" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2">
+			<font size="2">001</font></td>
+			<td width="104" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2">　</td>
+			<td width="99" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2">　</td>
+			<td width="214" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2">　</td>
+			<td align="center" height="30" width="100" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2">　</td>
+			<td align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" width="105" bordercolorlight="#4F74C2">　</td>
+			<td align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" width="79" bordercolorlight="#4F74C2">
+			<font size="2" color="#0E3E97">上传/查看</font></td>
+			<td align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" width="82" bordercolorlight="#4F74C2"><font size="2">
+			<font color="#0E3E97">修改</font>/<font color="#FF0000">删除</font></font></td>
+
+		</tr>
+		
+		<tr>
+			<td align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" colspan="8" background="../picture/cd2.gif" bordercolorlight="#FFFFFF">　</td>
+		</tr>
+	</table>
+
+
+   	</div>      
+      
+       </td>
+    </tr>
+</tbody>
+
+<tbody  style="display:none;"> 
+    <tr>
+      <td >
+      
+        <div align="center">
+        <table border="1" width="860" id="table4" bordercolorlight="#FFFFFF" cellspacing="0" bordercolordark="#FFFFFF" cellpadding="0" style="border-color: #4F74C2; ">
+		
+		
+		
+		
+		<tr>
+			<td width="60" background="../picture/cd2.gif" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" align="center" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">档案编号</font></td>
+			<td width="102" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" bordercolorlight="#4F74C2">
+			<font size="2" color="#FFFFFF">职称级别</font></td>
+			<td width="101" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" align="center" bordercolorlight="#4F74C2">
+			<font size="2" color="#FFFFFF">获取时间</font></td>
+			<td width="213" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" align="center" bordercolorlight="#4F74C2">
+			<font size="2" color="#FFFFFF">专业名称</font></td>
+			<td height="30" width="101" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" align="center" bordercolorlight="#4F74C2">
+			<font size="2" color="#FFFFFF">获取方式</font></td>
+			<td height="30" width="104" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" align="center" bordercolorlight="#4F74C2">
+			<font size="2" color="#FFFFFF">聘任时间</font></td>
+			<td height="30" width="155" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" colspan="2" align="center" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">操作</font></td>
+
+		</tr>
+		
+		<tr>
+			<form method="POST" action="--WEBBOT-SELF--">
+				<!--webbot bot="SaveResults" U-File="fpweb:///_private/form_results.csv" S-Format="TEXT/CSV" S-Label-Fields="TRUE" -->
+			
+			<td width="60" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2">
+			<font size="2">001</font></td>
+			<td width="102" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2"><select size="1" name="D2" style="width: 75; color:#0000FF"></select></td>
+			<td width="101" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2"><input name="T1" size="9" style="color:#0000FF"></td>
+			<td width="213" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2"><input name="T1" size="25" style="color:#0000FF"></td>
+			<td align="center" height="30" width="101" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2">
+			<input name="T6" size="11" style="color:#0000FF"></td>
+			<td align="center" height="30" width="104" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2"><input name="T1" size="11" style="color:#0000FF"></td>
+			
+			<td align="center" height="30" width="155" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2" colspan="2">
+			<input type="submit" value="增加" name="B2" style="padding:0; width: 50; height: 20">
+			<input type="reset" value="重置" name="B2" height="10" cellspacing="0" cellpadding="0" style="width: 50; height:20" >
+			</td>
+			
+			</form>
+		</tr>
+		
+		<tr>
+			<td width="60" background="../picture/cd2.gif" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" align="center" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">档案编号</font></td>
+			<td width="102" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">职称级别</font></td>
+			<td width="101" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" align="center" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">获取时间</font></td>
+			<td width="213" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" align="center" bordercolorlight="#4F74C2">
+			<font size="2" color="#FFFFFF">专业名称</font></td>
+			<td height="30" width="101" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" align="center" bordercolorlight="#4F74C2">
+			<font size="2" color="#FFFFFF">获取方式</font></td>
+			<td height="30"  bordercolordark="#FFFFFF" bordercolor="#4F74C2" width="104" background="../picture/cd2.gif" align="center" bordercolorlight="#4F74C2">
+			<font size="2" color="#FFFFFF">聘任时间</font></td>
+			<td height="30"  bordercolordark="#FFFFFF" bordercolor="#4F74C2" width="81" background="../picture/cd2.gif" align="center" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">文件</font></td>
+			<td height="30"  bordercolordark="#FFFFFF" bordercolor="#4F74C2" width="81" background="../picture/cd2.gif" align="center" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">操作</font></td>
+
+		</tr>
+		
+		<tr>
+			<td width="60" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2">
+			<font size="2">001</font></td>
+			<td width="102" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2">　</td>
+			<td width="101" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2">　</td>
+			<td width="213" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2">　</td>
+			<td align="center" height="30" width="101" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2">　</td>
+			<td align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" width="104" bordercolorlight="#4F74C2">　</td>
+			<td align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" width="81" bordercolorlight="#4F74C2">
+			<font size="2" color="#0E3E97">上传/查看</font></td>
+			<td align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" width="81" bordercolorlight="#4F74C2"><font size="2">
+			<font color="#0E3E97">修改</font>/<font color="#FF0000">删除</font></font></td>
+
+		</tr>
+		
+		<tr>
+			<td align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" colspan="8" background="../picture/cd2.gif" bordercolorlight="#FFFFFF">　</td>
+		</tr>
+	</table>
+
+
+   	</div>
+       </td>
+    </tr>
+</tbody>
+
+
+<tbody  style="display:none;"> 
+    <tr>
+      <td>  
+          <div align="center">
+        <table border="1" width="860" id="table5" bordercolorlight="#FFFFFF" cellspacing="0" bordercolordark="#FFFFFF" cellpadding="0" style="border-color: #4F74C2; ">
+		
+		
+		
+		
+		<tr>
+			<td width="60" background="../picture/cd2.gif" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" align="center" bordercolorlight="#0E3E97"><font size="2" color="#FFFFFF">档案编号</font></td>
+			<td width="102" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" bordercolorlight="#0E3E97">
+			<font size="2" color="#FFFFFF">认证级别</font></td>
+			<td width="101" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" align="center" bordercolorlight="#0E3E97">
+			<font size="2" color="#FFFFFF">获取时间</font></td>
+			<td width="212" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" align="center" bordercolorlight="#0E3E97">
+			<font size="2" color="#FFFFFF">专业名称</font></td>
+			<td height="30" width="102" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" align="center" bordercolorlight="#0E3E97">
+			<font size="2" color="#FFFFFF">获取方式</font></td>
+			<td height="30" width="104" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" align="center" bordercolorlight="#0E3E97">
+			<font size="2" color="#FFFFFF">聘任时间</font></td>
+			<td height="30" width="164" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" colspan="2" align="center" bordercolorlight="#0E3E97"><font size="2" color="#FFFFFF">操作</font></td>
+
+		</tr>
+		
+		<tr>
+			<form method="POST" action="--WEBBOT-SELF--">
+				<!--webbot bot="SaveResults" U-File="fpweb:///_private/form_results.csv" S-Format="TEXT/CSV" S-Label-Fields="TRUE" -->
+			
+			<td width="60" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2">
+			<font size="2">001</font></td>
+			<td width="102" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2"><select size="1" name="D2" style="width: 75; color:#0000FF"></select></td>
+			<td width="101" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2"><input name="T1" size="9" style="color:#0000FF"></td>
+			<td width="212" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2"><input name="T1" size="25" style="color:#0000FF"></td>
+			<td align="center" height="30" width="102" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2"><input name="T1" size="11" style="color:#0000FF"></td>
+			<td align="center" height="30" width="104" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2"><input name="T1" size="11" style="color:#0000FF"></td>
+			
+			<td align="center" height="30" width="164" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2" colspan="2">
+			<input type="submit" value="增加" name="B2" style="padding:0; width: 50; height: 20">
+			<input type="reset" value="重置" name="B2" height="10" cellspacing="0" cellpadding="0" style="width: 50; height:20" >
+			</td>
+			
+			</form>
+		</tr>
+		
+		<tr>
+			<td width="60" background="../picture/cd2.gif" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" align="center" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">档案编号</font></td>
+			<td width="102" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" bordercolorlight="#4F74C2">
+			<font size="2" color="#FFFFFF">认证级别</font></td>
+			<td width="101" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" align="center" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">获取时间</font></td>
+			<td width="212" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" align="center" bordercolorlight="#4F74C2">
+			<font size="2" color="#FFFFFF">专业名称</font></td>
+			<td height="30" width="102" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" align="center" bordercolorlight="#4F74C2">
+			<font size="2" color="#FFFFFF">获取方式</font></td>
+			<td height="30"  bordercolordark="#FFFFFF" bordercolor="#4F74C2" width="104" background="../picture/cd2.gif" align="center" bordercolorlight="#4F74C2">
+			<font size="2" color="#FFFFFF">聘任时间</font></td>
+			<td height="30"  bordercolordark="#FFFFFF" bordercolor="#4F74C2" width="76" background="../picture/cd2.gif" align="center" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">文件</font></td>
+			<td height="30"  bordercolordark="#FFFFFF" bordercolor="#4F74C2" width="86" background="../picture/cd2.gif" align="center" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">操作</font></td>
+
+		</tr>
+		
+		<tr>
+			<td width="60" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2">
+			<font size="2">001</font></td>
+			<td width="102" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2">　</td>
+			<td width="101" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2">　</td>
+			<td width="212" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2">　</td>
+			<td align="center" height="30" width="102" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2">　</td>
+			<td align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" width="104" bordercolorlight="#4F74C2">　</td>
+			<td align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" width="76" bordercolorlight="#4F74C2">
+			<font size="2" color="#0E3E97">上传/查看</font></td>
+			<td align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" width="86" bordercolorlight="#4F74C2"><font size="2">
+			<font color="#0E3E97">修改</font>/<font color="#FF0000">删除</font></font></td>
+
+		</tr>
+		
+		<tr>
+			<td align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" colspan="8" background="../picture/cd2.gif" bordercolorlight="#FFFFFF">　</td>
+		</tr>
+	</table>
+
+
+   	</div>
+      
+      
+      </td>
+    </tr>
+</tbody>
+
+<tbody  style="display:none;"> 
+    <tr>
+      <td>  
+          <div align="center">
+      <table border="1" width="860" id="table7" bordercolorlight="#FFFFFF" cellspacing="0" bordercolordark="#FFFFFF" cellpadding="0" style="border-color: #4F74C2; ">
+		
+		
+		
+		
+		<tr>
+			<td width="60" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" align="center" bordercolorlight="#4F74C2" background="../picture/cd2.gif"><font size="2" color="#FFFFFF">档案编号</font></td>
+			<td width="101" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" bordercolorlight="#4F74C2">
+			<font size="2" color="#FFFFFF">与本人关系</font></td>
+			<td width="97" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" align="center" bordercolorlight="#4F74C2">
+			<font size="2" color="#FFFFFF">姓名</font></td>
+			<td width="214" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" align="center" bordercolorlight="#4F74C2">
+			<font size="2" color="#FFFFFF">工作单位</font></td>
+			<td height="30" width="117" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" align="center" bordercolorlight="#4F74C2">
+			<font size="2" color="#FFFFFF">担任职务</font></td>
+			<td height="30" width="138" bordercolordark="#FFFFFF" bordercolor="#4F74C2" align="center" bordercolorlight="#4F74C2" background="../picture/cd2.gif">
+			<font size="2" color="#FFFFFF">联系方式</font></td>
+			<td height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" align="center" bordercolorlight="#4F74C2" background="../picture/cd2.gif" width="117"><font size="2" color="#FFFFFF">操作</font></td>
+
+		</tr>
+		
+		<tr>
+			<form method="POST" action="--WEBBOT-SELF--">
+				<!--webbot bot="SaveResults" U-File="fpweb:///_private/form_results.csv" S-Format="TEXT/CSV" S-Label-Fields="TRUE" -->
+			
+			<td width="60" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2">
+			<font size="2">001</font></td>
+			<td width="101" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2"><input name="T1" size="9" style="color:#0000FF"></td>
+			<td width="97" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2"><input name="T1" size="9" style="color:#0000FF"></td>
+			<td width="214" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2"><input name="T1" size="25" style="color:#0000FF"></td>
+			<td align="center" height="30" width="117" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2"><input name="T1" size="11" style="color:#0000FF"></td>
+			<td align="center" height="30" width="138" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2"><input name="T1" size="15" style="color:#0000FF"></td>
+			
+			<td align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2" width="117">
+			<input type="submit" value="增加" name="B2" style="padding:0; width: 40; height: 20"><font size="2">
+			</font>
+			<input type="reset" value="重置" name="B2" height="10" cellspacing="0" cellpadding="0" style="width: 40; height:20" ></td>
+			
+			</form>
+		</tr>
+		
+		<tr>
+			<td width="60" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" align="center" bordercolorlight="#4F74C2" background="../picture/cd2.gif"><font size="2" color="#FFFFFF">档案编号</font></td>
+			<td width="101" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">与本人关系</font></td>
+			<td width="97" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" align="center" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">姓名</font></td>
+			<td width="214" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" align="center" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">工作单位</font></td>
+			<td height="30" width="117" bordercolordark="#FFFFFF" bordercolor="#4F74C2" background="../picture/cd2.gif" align="center" bordercolorlight="#4F74C2"><font size="2" color="#FFFFFF">担任职务</font></td>
+			<td height="30"  bordercolordark="#FFFFFF" bordercolor="#4F74C2" width="138" align="center" bordercolorlight="#4F74C2" background="../picture/cd2.gif"><font size="2" color="#FFFFFF">联系方式</font></td>
+			<td height="30"  bordercolordark="#FFFFFF" bordercolor="#4F74C2" align="center" bordercolorlight="#4F74C2" background="../picture/cd2.gif" width="117">			
+			<font size="2" color="#FFFFFF">操作</font></td>
+
+		</tr>
+		
+		<tr>
+			<td width="60" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2">
+			<font size="2">001</font></td>
+			<td width="101" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2">　</td>
+			<td width="97" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2">　</td>
+			<td width="214" align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2">　</td>
+			<td align="center" height="30" width="117" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2">　</td>
+			<td align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" width="138" bordercolorlight="#4F74C2">　</td>
+			<td align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#4F74C2" width="117"><font size="2">
+			<font color="#0E3E97">修改</font>/<font color="#FF0000">删除</font></font></td>
+
+		</tr>
+		
+		<tr>
+			<td align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" colspan="7" background="../picture/cd2.gif" bordercolorlight="#FFFFFF">　</td>
+		</tr>
+	</table>
+
+
+   	</div>
+      
+      
+      </td>
+    </tr>
+</tbody>
+
+
+<tbody  style="display:none;"> 
+    <tr>
+      <td>  
+          <div align="center">
+     <table border="1" width="250" id="table2" bordercolorlight="#FFFFFF" cellspacing="0" bordercolordark="#FFFFFF" cellpadding="0" style="border-color: #4F74C2; ">
+		
+		<form method="POST" action="--WEBBOT-SELF--">
+				<!--webbot bot="SaveResults" U-File="G:\human resources\web page\_private\form_results.csv" S-Format="TEXT/CSV" S-Label-Fields="TRUE" -->
+		
+		
+		<tr>
+			<td width="250" background="../picture/cd2.gif" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" align="center" bordercolorlight="#4F74C2" colspan="2">
+			<font size="2" color="#FFFFFF">登录信息</font></td>
+
+		</tr>
+		
+		<tr>
+			
+			
+			<td width="100" align="right" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#FFFFFF">
+			<font size="2" color="#0E3E97">用户名称：</font></td>
+			<td align="center" height="30" width="150" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#FFFFFF"><input name="T1" size="15" style="float: left; color:#0000FF"></td>
+			
+			
+		</tr>
+		
+		<tr>
+			
+			
+			<td width="100" align="right" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#FFFFFF"><font size="2" color="#0E3E97">用户密码：</font></td>
+			
+			<td height="30" width="150" bordercolordark="#FFFFFF" bordercolor="#4F74C2" align="center" bordercolorlight="#FFFFFF"><input name="T1" size="15" style="float: left; color:#0000FF"></td>
+
+		</tr>
+		
+		<tr>
+			
+			
+			<td width="100" align="right" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#FFFFFF">
+			<font size="2" color="#0E3E97">确认密码：</font></td>
+			<td align="center" height="30" width="150" bordercolordark="#FFFFFF" bordercolor="#4F74C2" bordercolorlight="#FFFFFF"><input name="T1" size="15" style="float: left; color:#0000FF"></td>
+
+		</tr>
+		
+		<tr>
+			<td align="center" height="30" bordercolordark="#FFFFFF" bordercolor="#4F74C2" colspan="2" background="../picture/cd2.gif" bordercolorlight="#FFFFFF"><input type="submit" value="提交" name="B2" style="padding:0; width: 50; height: 20">
+			<input type="reset" value="重置" name="B2" height="10" cellspacing="0" cellpadding="0" style="width: 50; height:20" ></td>
+		</tr>
+    </form>
+	</table>
+    </div>
+    </td>
+    </tr>
+</tbody>
+</table>
+
+
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>薪酬明细报表打印</title>
+   
+   
+
+
+<OBJECT id=WebBrowser classid=CLSID:8856F961-340A-11D0-A96B-00C04FD705A2 height=0 width=0> </OBJECT> 
+	<style media=print> .Noprint{display:none;} </style>
+
+
+
+</head>
+
+<body topmargin="30">
+<div align="center">
+
+
+<table border="1" width="1024" id="table1" cellspacing="0" bordercolor="#000000" style="border:2px solid #000000; padding:1px; border-collapse:collapse" cellpadding="0">
+	
+				<tr>
+		<td height="50" align="center" rowspan="2" width="245"><img border="0" src="../picture/ywbs-bz.gif" width="238" height="50" align="left"></td>
+		<td  align="center" height="25" width="579"><font size="5" face="隶书">2013年01月（身份）员工</font></td>
+		<td  align="left" height="50" rowspan="2" width="190">
+
+
+		<table border="1" id="table2" cellspacing="0" bordercolor="#000000" style="border-style:solid; border-color:#000000; padding:1px; border-collapse:collapse" cellpadding="0" width="100%">
+			<tr>
+				<td height="16"><font size="2">制 表 人：</font></td>
+			</tr>
+			<tr>
+				<td height="16"><font size="2">制表单位：人事部</font></td>
+			</tr>
+			<tr>
+				<td height="16"><font size="2">
+		<script language="JavaScript" type="text/JavaScript">
+var day="";
+var month="";
+var ampm="";
+var ampmhour="";
+var myweekday="";
+var year="";
+mydate=new Date();
+myweekday=mydate.getDay();
+mymonth=mydate.getMonth()+1;
+myday= mydate.getDate();
+myyear= mydate.getYear();
+year=(myyear > 200) ? myyear : 1900 + myyear;
+document.write("制表日期："+year+"年"+mymonth+"月"+myday+"日 ");
+       </script></font></td>
+			</tr>
+		</table>
+		</td>
+			</tr>
+			
+					
+			<tr>
+		<td align="center" height="25" width="579"><font size="5" face="隶书">薪酬明细报表</font></td>
+			</tr>	
+	<tr>
+		<td align="left" width="911" height="28" colspan="3"><font size="1">员工姓名|</font></td>
+	</tr>
+	
+	
+	
+		
+	<tr class="Noprint">
+		<td height="28" align="center" colspan="3">
+		
+			<input type=button value="打 印"  onclick=document.all.WebBrowser.ExecWB(6,1) name="B1" height="10" cellspacing="0" cellpadding="0" style="width: 50; height:20"> 
+			<input type="button" value="设 置" onclick=document.all.WebBrowser.ExecWB(8,1) name="B2" height="10" cellspacing="0" cellpadding="0" style="width: 50; height:20" >
+			<input type="submit" value="返 回" onclick="window.history.back()" name="B3" height="10" cellspacing="0" cellpadding="0" style="width: 50; height:20">
+			
+
+		</td>
+			</tr>		
+</table>
+
+
+</div>
+</body>
+
+</html>
