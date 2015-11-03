@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>首页</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="alternate icon" type="image/png" href="assets/i/favicon.png">
+  <link rel="stylesheet" href="assets/css/amazeui.min.css"/>
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="stylesheet" href="assets/css/admin-diy.css">
+</head>
+<body>
+<header class="am-topbar admin-header">
+  <div class="am-topbar-brand">
+    <strong>语文报社人事系统</strong> <small>首页</small>
+  </div>
+  <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+  <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+    <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list">
+      <li><a href="javascript:;"><span class="am-icon-envelope-o"></span> 收件箱 <span class="am-badge am-badge-warning">5</span></a></li>
+      <li class="am-dropdown" data-am-dropdown>
+        <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
+          <span class="am-icon-users"></span> 管理员 <span class="am-icon-caret-down"></span>
+        </a>
+        <ul class="am-dropdown-content">
+          <li><a href="#"><span class="am-icon-user"></span> 资料</a></li>
+          <li><a href="#"><span class="am-icon-cog"></span> 设置</a></li>
+          <li><a href="#"><span class="am-icon-power-off"></span> 退出</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</header>
+<div class="am-g pt30 pb30 font-size14">
+    <div class="am-u-md-2 am-u-lg-2">
+        <!-- sidebar start -->
+  <div class="admin-sidebar am-offcanvas" id="admin-offcanvas">
+    <div class="am-offcanvas-bar admin-offcanvas-bar">
+      <ul class="am-list admin-sidebar-list">
+        <li class="admin-parent">
+          <a class="am-cf" data-am-collapse="{target: '#collapse-nav'}"><span class="am-icon-file"></span> 档案管理 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+          <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-nav">
+            <li><a href="admin-user.html" class="am-cf"><span class="am-icon-table"></span> 档案录入</a></li>
+            <li><a href="admin-help.html"><span class="am-icon-list"></span> 档案维护</a></li>
+            <li><a href="admin-gallery.html"><span class="am-icon-search"></span> 高级检索</a></li>
+          </ul>
+        </li>
+          <li class="admin-parent">
+          <a class="am-cf" data-am-collapse="{target: '#collapse-nav1'}"><span class="am-icon-rmb"></span> 薪酬管理 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+          <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav1">
+            <li><a href="admin-user.html" class="am-cf"><span class="am-icon-usd"></span> 工资构成</a></li>
+            <li><a href="admin-help.html"><span class="am-icon-check-square-o"></span> 批量调整</a></li>
+            <li><a href="admin-gallery.html"><span class="am-icon-th"></span> 生成查询</a></li>
+              <li><a href="admin-user.html" class="am-cf"><span class="am-icon-spinner"></span> 财务审核</span></a></li>
+            <li><a href="admin-help.html"><span class="am-icon-money"></span> 完税设置</a></li>
+            <li><a href="admin-gallery.html"><span class="am-icon-bar-chart"></span> 项目分类</a></li>
+          </ul>
+        </li>
+          <li class="admin-parent">
+          <a class="am-cf" data-am-collapse="{target: '#collapse-nav2'}"><span class="am-icon-area-chart"></span> 分类管理 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+          <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav2">
+            <li><a href="admin-user.html" class="am-cf"><span class="am-icon-sitemap"></span> 部门分类</a></li>
+            <li><a href="admin-help.html"><span class="am-icon-signal"></span> 职务分类</a></li>
+            <li><a href="admin-gallery.html"><span class="am-icon-sort-amount-asc"></span> 职称级别</a></li>
+              <li><a href="admin-user.html" class="am-cf"><span class="am-icon-users"></span> 身份分类</a></li>
+            <li><a href="admin-help.html"><span class="am-icon-trophy"></span> 学历分类</a></li>
+            <li><a href="admin-gallery.html"><span class="am-icon-wrench"></span> 在职状态</a></li>
+          </ul>
+        </li>
+          <li class="admin-parent">
+          <a class="am-cf" data-am-collapse="{target: '#collapse-nav3'}"><span class="am-icon-wrench"></span> 系统管理 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+          <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-nav3">
+            <li><a href="admin-user.html" class="am-cf"><span class="am-icon-user-plus"></span> 用户管理</a></li>
+            <li><a href="admin-help.html"><span class="am-icon-yelp"></span> 企业信息</a></li>
+            
+          </ul>
+        </li>
+        
+      </ul>
+
+      <div class="am-panel am-panel-default admin-sidebar-panel">
+        <div class="am-panel-bd">
+          <p><span class="am-icon-bookmark"></span> 公告</p>
+          <p>时光静好，与君语；细水流年，与君同。—— Amaze UI</p>
+        </div>
+      </div>
+
+      <div class="am-panel am-panel-default admin-sidebar-panel">
+        <div class="am-panel-bd">
+          <p><span class="am-icon-tag"></span> wiki</p>
+          <p>Welcome to the Amaze UI wiki!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- sidebar end -->
+    </div>
+    <!-- content start-->
+    <div class="am-u-md-10 am-u-lg-10">
+        <div class="am-cf am-padding">
+            <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">档案录入</strong></div>
+        </div>
+        <div class="am-text-center"><h1>基本信息登记表</h1></div>
+        <div>
+            <form class="am-form am-form-horizontal">
+                <div class="am-form-group">
+                    
+                    <label class="am-u-md-2 am-u-lg-1 am-form-label" for="doc-ipt-1">档案编号</label>
+                    <div class="am-u-md-2 am-u-lg-2"><input type="email" placeholder="" id="doc-ipt-1"></div>
+                    <label class="am-u-md-2 am-u-lg-1 am-form-label" for="doc-ipt-2">员工姓名</label>
+                    <div class="am-u-md-2 am-u-lg-2"><input type="email" placeholder="" id="doc-ipt-2"></div>
+                    <label class="am-u-md-2 am-u-lg-1 am-form-label" for="doc-ipt-3">性别</label>
+                    <div class="am-u-md-2 am-u-lg-2 am-form-group am-form-select">
+                        <select class="" id="doc-ipt-3">
+                            <option value="">男</option>
+                            <option value="">女</option>
+                        </select>
+                    </div>
+                    <label class="am-u-md-2 am-u-lg-1 am-form-label" for="doc-ipt-4">婚姻状况</label>
+                    <div class="am-u-md-2 am-u-lg-2 am-form-group am-form-select" style="float:left">
+                        <select class="" id="doc-ipt-4">
+                            <option value="">已婚</option>
+                            <option value="">未婚</option>
+                            <option value="">离异</option>
+                            <option value="">丧偶</option>
+                        </select>
+                    </div>
+                    
+                </div>
+            </form>
+        </div>
+  
+
+  <div class="am-form-group">
+    <div class="am-u-sm-offset-2 am-u-sm-10">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox"> 记住十万年
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="am-form-group">
+    <div class="am-u-sm-10 am-u-sm-offset-2">
+      <button type="submit" class="am-btn am-btn-default">提交登入</button>
+    </div>
+  </div>
+</form>
+
+
+    
+  </div>
+    <!-- content end -->
+</div>
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="assets/js/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="assets/js/amazeui.min.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
